@@ -1,23 +1,25 @@
 openapi: 3.0.4
 info:
   title: Sitemap Generator
-  description: Sitemap Generator creates valid XML sitemaps from URL lists following the sitemaps.org protocol for search engine optimization.
+  description: >-
+    Sitemap Generator creates valid XML sitemaps from URL lists following the
+    sitemaps.org protocol for search engine optimization.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/sitemapgenerator:
     post:
       summary: Generate Sitemap
-      description: Sitemap Generator creates valid XML sitemaps from URL lists following the sitemaps.org protocol for search engine optimization.
+      description: Generate an XML sitemap from URLs
       operationId: sitemapgenerator
       parameters: []
       responses:
@@ -35,43 +37,42 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
-                  sitemap: >-
+                  sitemap: |-
                     <?xml version="1.0" encoding="UTF-8"?>
-
                     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
                       <url>
                         <loc>https://example.com/</loc>
-                        <lastmod>2025-12-02</lastmod>
+                        <lastmod>2025-12-16</lastmod>
                         <changefreq>weekly</changefreq>
                         <priority>0.5</priority>
                       </url>
                       <url>
                         <loc>https://example.com/about</loc>
-                        <lastmod>2025-12-02</lastmod>
+                        <lastmod>2025-12-16</lastmod>
                         <changefreq>weekly</changefreq>
                         <priority>0.5</priority>
                       </url>
                       <url>
                         <loc>https://example.com/contact</loc>
-                        <lastmod>2025-12-02</lastmod>
+                        <lastmod>2025-12-16</lastmod>
                         <changefreq>weekly</changefreq>
                         <priority>0.5</priority>
                       </url>
                       <url>
                         <loc>https://example.com/blog</loc>
-                        <lastmod>2025-12-02</lastmod>
+                        <lastmod>2025-12-16</lastmod>
                         <changefreq>daily</changefreq>
                         <priority>0.8</priority>
                       </url>
                       <url>
                         <loc>https://example.com/products</loc>
-                        <lastmod>2025-12-02</lastmod>
+                        <lastmod>2025-12-16</lastmod>
                         <changefreq>weekly</changefreq>
                         <priority>0.9</priority>
                       </url>
@@ -91,7 +92,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
       requestBody:
         required: true
         content:
@@ -100,52 +101,24 @@ paths:
               type: object
               properties:
                 urls:
-                  type: array
-                  description: Array of URLs (strings or objects with url, priority, changeFreq, lastMod)
-                  example:
-                  - /
-                  - /about
-                  - /contact
-                  - url: /blog
-                    priority: 0.8
-                    changeFreq: daily
-                  - url: /products
-                    priority: 0.9
+                  type: string
+                  description: >-
+                    Array of URLs (strings or objects with url, priority,
+                    changeFreq, lastMod)
                 baseUrl:
                   type: string
                   description: Base URL to prepend to relative paths
-                  example: https://example.com
                 changeFreq:
                   type: string
-                  description: 'Default change frequency: always, hourly, daily, weekly, monthly, yearly, never'
-                  default: weekly
-                  example: weekly
+                  description: Default change frequency
                 priority:
                   type: number
-                  description: Default priority (0.0 to 1.0)
-                  default: '0.5'
-                  example: 0.5
+                  description: Default priority
                 includeLastMod:
                   type: boolean
                   description: Include lastmod dates in sitemap
-                  default: true
-                  example: true
               required:
-              - urls
-              example:
-                urls:
-                - /
-                - /about
-                - /contact
-                - url: /blog
-                  priority: 0.8
-                  changeFreq: daily
-                - url: /products
-                  priority: 0.9
-                baseUrl: https://example.com
-                changeFreq: weekly
-                priority: 0.5
-                includeLastMod: true
+                - urls
 components:
   securitySchemes:
     api_key:
@@ -153,4 +126,18 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
+sampleRequest:
+  urls:
+    - /
+    - /about
+    - /contact
+    - url: /blog
+      priority: 0.8
+      changeFreq: daily
+    - url: /products
+      priority: 0.9
+  baseUrl: https://example.com
+  changeFreq: weekly
+  priority: 0.5
+  includeLastMod: true
