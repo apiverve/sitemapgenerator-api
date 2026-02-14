@@ -1,16 +1,21 @@
-# Sitemap Generator API
+# [Sitemap Generator API](https://apiverve.com/marketplace/sitemapgenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
 
-> Sitemap Generator creates valid XML sitemaps from URL lists following the sitemaps.org protocol for search engine optimization.
+Sitemap Generator creates valid XML sitemaps from URL lists following the sitemaps.org protocol for search engine optimization.
+
+The Sitemap Generator API provides a simple, reliable way to integrate sitemap generator functionality into your applications. Built for developers who need production-ready sitemap generator capabilities without the complexity of building from scratch.
+
+**[View API Details →](https://apiverve.com/marketplace/sitemapgenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com)
-[![Method](https://img.shields.io/badge/Method-POST-blue.svg)](#)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/sitemapgenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
 **Available on:**
 [![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/package/@apiverve/sitemapgenerator)
 [![NuGet](https://img.shields.io/badge/NuGet-004880?style=flat&logo=nuget&logoColor=white)](https://www.nuget.org/packages/APIVerve.API.SitemapGenerator)
 [![PyPI](https://img.shields.io/badge/PyPI-3776AB?style=flat&logo=python&logoColor=white)](https://pypi.org/project/apiverve-sitemapgenerator/)
+[![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)](#-go)
 [![JitPack](https://img.shields.io/badge/JitPack-2E7D32?style=flat&logo=android&logoColor=white)](#-android-jitpack)
 
 ---
@@ -22,34 +27,11 @@
 ```javascript
 async function callSitemapGeneratorAPI() {
     try {
-        const requestBody = {
-    "urls": [
-        "/",
-        "/about",
-        "/contact",
-        {
-            "url": "/blog",
-            "priority": 0.8,
-            "changeFreq": "daily"
-        },
-        {
-            "url": "/products",
-            "priority": 0.9
-        }
-    ],
-    "baseUrl": "https://example.com",
-    "changeFreq": "weekly",
-    "priority": 0.5,
-    "includeLastMod": true
-};
-
         const response = await fetch('https://api.apiverve.com/v1/sitemapgenerator', {
-            method: 'POST',
+            method: 'GET',
             headers: {
-                'x-api-key': 'YOUR_API_KEY_HERE',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(requestBody)
+                'x-api-key': 'YOUR_API_KEY_HERE'
+            }
         });
 
         const data = await response.json();
@@ -65,12 +47,8 @@ callSitemapGeneratorAPI();
 ### Using cURL
 
 ```bash
-curl -X POST "https://api.apiverve.com/v1/sitemapgenerator" \
-  -H "x-api-key: YOUR_API_KEY_HERE" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "param": "value"
-  }'
+curl -X GET "https://api.apiverve.com/v1/sitemapgenerator?param=value" \
+  -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
 **Get your API key:** [https://apiverve.com](https://apiverve.com)
@@ -123,30 +101,45 @@ implementation 'com.github.apiverve:sitemapgenerator-api:1.0.0'
 
 ---
 
-## Features
+### 🐹 Go
 
-✅ **Multi-platform support** - Use the same API across Node.js, .NET, Python, Android, and browsers
-✅ **Simple authentication** - Just add your API key in the request header
-✅ **Comprehensive documentation** - Full examples and API reference available
-✅ **Production-ready** - Used by developers worldwide
+```bash
+go get github.com/apiverve/sitemapgenerator-api/go
+```
+
+[**Package Code →**](./go/)
+
+---
+
+## Why Use This API?
+
+| Feature | Benefit |
+|---------|---------|
+| **Multi-language SDKs** | Native packages for JavaScript, Python, C#, Go, and Android |
+| **Simple Integration** | Single API key authentication, consistent response format |
+| **Production Ready** | 99.9% uptime, fast response times, used by thousands of developers |
+| **Comprehensive Docs** | Full examples, OpenAPI spec, and dedicated support |
 
 ---
 
 ## Documentation
 
-📚 **Full API Documentation:** [https://docs.apiverve.com/ref/sitemapgenerator](https://docs.apiverve.com/ref/sitemapgenerator)
+- 🏠 **API Home:** [Sitemap Generator API](https://apiverve.com/marketplace/sitemapgenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 📚 **API Reference:** [docs.apiverve.com/ref/sitemapgenerator](https://docs.apiverve.com/ref/sitemapgenerator)
+- 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
+- 💡 **Examples:** [examples/](./examples/)
 
 ---
 
-## Use Cases
+## What Can You Build?
 
-Common use cases for the Sitemap Generator API:
+The Sitemap Generator API is commonly used for:
 
-- ✅ Integration into web applications
-- ✅ Mobile app development
-- ✅ Data analysis and reporting
-- ✅ Automation workflows
-- ✅ Microservices architecture
+- **Web Applications** - Add sitemap generator features to your frontend or backend
+- **Mobile Apps** - Native SDKs for iOS and Android development
+- **Automation** - Integrate with n8n, Zapier, or custom workflows
+- **SaaS Products** - Enhance your product with sitemap generator capabilities
+- **Data Pipelines** - Process and analyze data at scale
 
 ---
 
@@ -173,6 +166,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
+- 🏠 **API Home**: [Sitemap Generator API](https://apiverve.com/marketplace/sitemapgenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
@@ -202,4 +196,4 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 Built with ❤️ by [APIVerve](https://apiverve.com)
 
-Copyright © 2025 APIVerve. All rights reserved.
+Copyright © 2026 APIVerve. All rights reserved.
