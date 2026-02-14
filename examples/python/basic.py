@@ -14,37 +14,14 @@ API_URL = 'https://api.apiverve.com/v1/sitemapgenerator'
 
 def call_sitemapgenerator_api():
     """
-    Make a POST request to the Sitemap Generator API
+    Make a GET request to the Sitemap Generator API
     """
     try:
-        # Request body
-        request_body &#x3D; {
-    &#x27;urls&#x27;: [
-        &#x27;/&#x27;,
-        &#x27;/about&#x27;,
-        &#x27;/contact&#x27;,
-        {
-            &#x27;url&#x27;: &#x27;/blog&#x27;,
-            &#x27;priority&#x27;: 0.8,
-            &#x27;changeFreq&#x27;: &#x27;daily&#x27;
-        },
-        {
-            &#x27;url&#x27;: &#x27;/products&#x27;,
-            &#x27;priority&#x27;: 0.9
-        }
-    ],
-    &#x27;baseUrl&#x27;: &#x27;https://example.com&#x27;,
-    &#x27;changeFreq&#x27;: &#x27;weekly&#x27;,
-    &#x27;priority&#x27;: 0.5,
-    &#x27;includeLastMod&#x27;: true
-}
-
         headers = {
-            'x-api-key': API_KEY,
-            'Content-Type': 'application/json'
+            'x-api-key': API_KEY
         }
 
-        response = requests.post(API_URL, headers=headers, json=request_body)
+        response = requests.get(API_URL, headers=headers)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
