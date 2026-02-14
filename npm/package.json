@@ -1,9 +1,18 @@
 {
   "name": "@apiverve/sitemapgenerator",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "description": "Sitemap Generator creates valid XML sitemaps from URL lists following the sitemaps.org protocol for search engine optimization.",
   "main": "index.js",
   "types": "index.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "mocha",
     "example": "node examples/basic.js"
@@ -14,14 +23,18 @@
     "directory": "npm"
   },
   "keywords": [
-    "sitemap generator", "xml sitemap", "seo sitemap", "website sitemap", "url sitemap"
+    ""
   ],
-  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "author": {
+    "name": "APIVerve",
+    "email": "hello@apiverve.com",
+    "url": "https://apiverve.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/apiverve/sitemapgenerator-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/sitemapgenerator?utm_source=npm",
+  "homepage": "https://apiverve.com/marketplace/sitemapgenerator?utm_source=npm&utm_medium=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
