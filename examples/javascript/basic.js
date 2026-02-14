@@ -9,39 +9,15 @@ const API_KEY = process.env.APIVERVE_API_KEY || 'YOUR_API_KEY_HERE';
 const API_URL = 'https://api.apiverve.com/v1/sitemapgenerator';
 
 /**
- * Make a POST request to the Sitemap Generator API
+ * Make a GET request to the Sitemap Generator API
  */
 async function callSitemapGeneratorAPI() {
   try {
-    // Request body
-    const requestBody &#x3D; {
-    &quot;urls&quot;: [
-        &quot;/&quot;,
-        &quot;/about&quot;,
-        &quot;/contact&quot;,
-        {
-            &quot;url&quot;: &quot;/blog&quot;,
-            &quot;priority&quot;: 0.8,
-            &quot;changeFreq&quot;: &quot;daily&quot;
-        },
-        {
-            &quot;url&quot;: &quot;/products&quot;,
-            &quot;priority&quot;: 0.9
-        }
-    ],
-    &quot;baseUrl&quot;: &quot;https://example.com&quot;,
-    &quot;changeFreq&quot;: &quot;weekly&quot;,
-    &quot;priority&quot;: 0.5,
-    &quot;includeLastMod&quot;: true
-};
-
     const response = await fetch(API_URL, {
-      method: 'POST',
+      method: 'GET',
       headers: {
-        'x-api-key': API_KEY,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(requestBody)
+        'x-api-key': API_KEY
+      }
     });
 
     // Check if response is successful
