@@ -1,17 +1,20 @@
 [project]
 name = "apiverve-sitemapgenerator"
-version = "1.1.12"
+version = "1.1.13"
 authors = [
   { name="APIVerve", email="hello@apiverve.com" },
 ]
 description = "Sitemap Generator creates valid XML sitemaps from URL lists following the sitemaps.org protocol for search engine optimization."
-keywords = ["sitemap generator", "xml sitemap", "seo sitemap", "website sitemap", "url sitemap"]
+keywords = []
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.7"
+license = "MIT"
+dependencies = [
+    "requests>=2.25.0"
+]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Intended Audience :: Developers",
     "Intended Audience :: Financial and Insurance Industry",
