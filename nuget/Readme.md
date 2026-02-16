@@ -61,24 +61,24 @@ class Program
         var apiClient = new SitemapGeneratorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new QueryOptions {
-  urls = [
-    "/",
-    "/about",
-    "/contact",
-    {
-      url = "/blog",
-      priority = 0.8,
-      changeFreq = "daily"
-    },
-    {
-      url = "/products",
-      priority = 0.9
-    }
-  ],
-  baseUrl = "https://example.com",
-  changeFreq = "weekly",
-  priority = 0.5,
-  includeLastMod = true
+    urls = [
+        "/",
+        "/about",
+        "/contact",
+        {
+            url = "/blog",
+            priority = 0.8,
+            changeFreq = "daily"
+        },
+        {
+            url = "/products",
+            priority = 0.9
+        }
+    ],
+    baseUrl = "https://example.com",
+    changeFreq = "weekly",
+    priority = 0.5,
+    includeLastMod = true
 };
 
         // Make the API call
@@ -142,24 +142,24 @@ public class Example
         var apiClient = new SitemapGeneratorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new QueryOptions {
-  urls = [
-    "/",
-    "/about",
-    "/contact",
-    {
-      url = "/blog",
-      priority = 0.8,
-      changeFreq = "daily"
-    },
-    {
-      url = "/products",
-      priority = 0.9
-    }
-  ],
-  baseUrl = "https://example.com",
-  changeFreq = "weekly",
-  priority = 0.5,
-  includeLastMod = true
+    urls = [
+        "/",
+        "/about",
+        "/contact",
+        {
+            url = "/blog",
+            priority = 0.8,
+            changeFreq = "daily"
+        },
+        {
+            url = "/products",
+            priority = 0.9
+        }
+    ],
+    baseUrl = "https://example.com",
+    changeFreq = "weekly",
+    priority = 0.5,
+    includeLastMod = true
 };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
@@ -191,24 +191,24 @@ public class Example
         var apiClient = new SitemapGeneratorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new QueryOptions {
-  urls = [
-    "/",
-    "/about",
-    "/contact",
-    {
-      url = "/blog",
-      priority = 0.8,
-      changeFreq = "daily"
-    },
-    {
-      url = "/products",
-      priority = 0.9
-    }
-  ],
-  baseUrl = "https://example.com",
-  changeFreq = "weekly",
-  priority = 0.5,
-  includeLastMod = true
+    urls = [
+        "/",
+        "/about",
+        "/contact",
+        {
+            url = "/blog",
+            priority = 0.8,
+            changeFreq = "daily"
+        },
+        {
+            url = "/products",
+            priority = 0.9
+        }
+    ],
+    baseUrl = "https://example.com",
+    changeFreq = "weekly",
+    priority = 0.5,
+    includeLastMod = true
 };
 
         var response = apiClient.Execute(queryOptions);
@@ -245,24 +245,24 @@ public class Example
         var apiClient = new SitemapGeneratorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new QueryOptions {
-  urls = [
-    "/",
-    "/about",
-    "/contact",
-    {
-      url = "/blog",
-      priority = 0.8,
-      changeFreq = "daily"
-    },
-    {
-      url = "/products",
-      priority = 0.9
-    }
-  ],
-  baseUrl = "https://example.com",
-  changeFreq = "weekly",
-  priority = 0.5,
-  includeLastMod = true
+    urls = [
+        "/",
+        "/about",
+        "/contact",
+        {
+            url = "/blog",
+            priority = 0.8,
+            changeFreq = "daily"
+        },
+        {
+            url = "/products",
+            priority = 0.9
+        }
+    ],
+    baseUrl = "https://example.com",
+    changeFreq = "weekly",
+    priority = 0.5,
+    includeLastMod = true
 };
 
         try
@@ -318,24 +318,24 @@ public class Example
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
         var queryOptions = new QueryOptions {
-  urls = [
-    "/",
-    "/about",
-    "/contact",
-    {
-      url = "/blog",
-      priority = 0.8,
-      changeFreq = "daily"
-    },
-    {
-      url = "/products",
-      priority = 0.9
-    }
-  ],
-  baseUrl = "https://example.com",
-  changeFreq = "weekly",
-  priority = 0.5,
-  includeLastMod = true
+    urls = [
+        "/",
+        "/about",
+        "/contact",
+        {
+            url = "/blog",
+            priority = 0.8,
+            changeFreq = "daily"
+        },
+        {
+            url = "/products",
+            priority = 0.9
+        }
+    ],
+    baseUrl = "https://example.com",
+    changeFreq = "weekly",
+    priority = 0.5,
+    includeLastMod = true
 };
 
         try
@@ -376,24 +376,24 @@ apiClient.AddCustomHeader("X-Custom-Header", "custom-value");
 apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
 var queryOptions = new QueryOptions {
-  urls = [
-    "/",
-    "/about",
-    "/contact",
-    {
-      url = "/blog",
-      priority = 0.8,
-      changeFreq = "daily"
-    },
-    {
-      url = "/products",
-      priority = 0.9
-    }
-  ],
-  baseUrl = "https://example.com",
-  changeFreq = "weekly",
-  priority = 0.5,
-  includeLastMod = true
+    urls = [
+        "/",
+        "/about",
+        "/contact",
+        {
+            url = "/blog",
+            priority = 0.8,
+            changeFreq = "daily"
+        },
+        {
+            url = "/products",
+            priority = 0.9
+        }
+    ],
+    baseUrl = "https://example.com",
+    changeFreq = "weekly",
+    priority = 0.5,
+    includeLastMod = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -419,24 +419,24 @@ apiClient.SetLogger(message =>
 });
 
 var queryOptions = new QueryOptions {
-  urls = [
-    "/",
-    "/about",
-    "/contact",
-    {
-      url = "/blog",
-      priority = 0.8,
-      changeFreq = "daily"
-    },
-    {
-      url = "/products",
-      priority = 0.9
-    }
-  ],
-  baseUrl = "https://example.com",
-  changeFreq = "weekly",
-  priority = 0.5,
-  includeLastMod = true
+    urls = [
+        "/",
+        "/about",
+        "/contact",
+        {
+            url = "/blog",
+            priority = 0.8,
+            changeFreq = "daily"
+        },
+        {
+            url = "/products",
+            priority = 0.9
+        }
+    ],
+    baseUrl = "https://example.com",
+    changeFreq = "weekly",
+    priority = 0.5,
+    includeLastMod = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -454,24 +454,24 @@ apiClient.SetMaxRetries(3);           // Retry up to 3 times (default: 0, max: 3
 apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (default: 1000ms)
 
 var queryOptions = new QueryOptions {
-  urls = [
-    "/",
-    "/about",
-    "/contact",
-    {
-      url = "/blog",
-      priority = 0.8,
-      changeFreq = "daily"
-    },
-    {
-      url = "/products",
-      priority = 0.9
-    }
-  ],
-  baseUrl = "https://example.com",
-  changeFreq = "weekly",
-  priority = 0.5,
-  includeLastMod = true
+    urls = [
+        "/",
+        "/about",
+        "/contact",
+        {
+            url = "/blog",
+            priority = 0.8,
+            changeFreq = "daily"
+        },
+        {
+            url = "/products",
+            priority = 0.9
+        }
+    ],
+    baseUrl = "https://example.com",
+    changeFreq = "weekly",
+    priority = 0.5,
+    includeLastMod = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -482,28 +482,29 @@ var response = await apiClient.ExecuteAsync(queryOptions);
 The API client implements `IDisposable` for proper resource cleanup:
 
 ```csharp
+var queryOptions = new QueryOptions {
+    urls = [
+        "/",
+        "/about",
+        "/contact",
+        {
+            url = "/blog",
+            priority = 0.8,
+            changeFreq = "daily"
+        },
+        {
+            url = "/products",
+            priority = 0.9
+        }
+    ],
+    baseUrl = "https://example.com",
+    changeFreq = "weekly",
+    priority = 0.5,
+    includeLastMod = true
+};
+
 using (var apiClient = new SitemapGeneratorAPIClient("[YOUR_API_KEY]"))
 {
-    var queryOptions = new QueryOptions {
-  urls = [
-    "/",
-    "/about",
-    "/contact",
-    {
-      url = "/blog",
-      priority = 0.8,
-      changeFreq = "daily"
-    },
-    {
-      url = "/products",
-      priority = 0.9
-    }
-  ],
-  baseUrl = "https://example.com",
-  changeFreq = "weekly",
-  priority = 0.5,
-  includeLastMod = true
-};
     var response = await apiClient.ExecuteAsync(queryOptions);
     Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(response, Newtonsoft.Json.Formatting.Indented));
 }
