@@ -44,7 +44,13 @@ from apiverve_sitemapgenerator.apiClient import SitemapgeneratorAPIClient
 # Initialize the client with your APIVerve API key
 api = SitemapgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "urls": [ "/", "/about", "/contact", { "url": "/blog", "priority": 0.8, "changeFreq": "daily" }, { "url": "/products", "priority": 0.9 } ], "baseUrl": "https://example.com", "changeFreq": "weekly", "priority": 0.5, "includeLastMod": true }
+query = {
+    "urls": ["/","/about","/contact",{"url":"/blog","priority":0.8,"changeFreq":"daily"},{"url":"/products","priority":0.9}],
+    "baseUrl": "https://example.com",
+    "changeFreq": "weekly",
+    "priority": 0.5,
+    "includeLastMod": true
+}
 
 try:
     # Make the API call
@@ -82,7 +88,13 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "urls": [ "/", "/about", "/contact", { "url": "/blog", "priority": 0.8, "changeFreq": "daily" }, { "url": "/products", "priority": 0.9 } ], "baseUrl": "https://example.com", "changeFreq": "weekly", "priority": 0.5, "includeLastMod": true }
+query = {
+    "urls": ["/","/about","/contact",{"url":"/blog","priority":0.8,"changeFreq":"daily"},{"url":"/products","priority":0.9}],
+    "baseUrl": "https://example.com",
+    "changeFreq": "weekly",
+    "priority": 0.5,
+    "includeLastMod": true
+}
 ```
 
 ###### Simple Request
@@ -131,7 +143,13 @@ from apiverve_sitemapgenerator.apiClient import SitemapgeneratorAPIClient, Sitem
 
 api = SitemapgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "urls": [ "/", "/about", "/contact", { "url": "/blog", "priority": 0.8, "changeFreq": "daily" }, { "url": "/products", "priority": 0.9 } ], "baseUrl": "https://example.com", "changeFreq": "weekly", "priority": 0.5, "includeLastMod": true }
+query = {
+    "urls": ["/","/about","/contact",{"url":"/blog","priority":0.8,"changeFreq":"daily"},{"url":"/products","priority":0.9}],
+    "baseUrl": "https://example.com",
+    "changeFreq": "weekly",
+    "priority": 0.5,
+    "includeLastMod": true
+}
 
 try:
     result = api.execute(query)
@@ -152,7 +170,13 @@ from apiverve_sitemapgenerator.apiClient import SitemapgeneratorAPIClient, Sitem
 
 api = SitemapgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "urls": [ "/", "/about", "/contact", { "url": "/blog", "priority": 0.8, "changeFreq": "daily" }, { "url": "/products", "priority": 0.9 } ], "baseUrl": "https://example.com", "changeFreq": "weekly", "priority": 0.5, "includeLastMod": true }
+query = {
+    "urls": ["/","/about","/contact",{"url":"/blog","priority":0.8,"changeFreq":"daily"},{"url":"/products","priority":0.9}],
+    "baseUrl": "https://example.com",
+    "changeFreq": "weekly",
+    "priority": 0.5,
+    "includeLastMod": true
+}
 
 try:
     result = api.execute(query)
@@ -186,7 +210,13 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_sitemapgenerator.apiClient import SitemapgeneratorAPIClient, SitemapgeneratorAPIClientError
 
-query = { "urls": [ "/", "/about", "/contact", { "url": "/blog", "priority": 0.8, "changeFreq": "daily" }, { "url": "/products", "priority": 0.9 } ], "baseUrl": "https://example.com", "changeFreq": "weekly", "priority": 0.5, "includeLastMod": true }
+query = {
+    "urls": ["/","/about","/contact",{"url":"/blog","priority":0.8,"changeFreq":"daily"},{"url":"/products","priority":0.9}],
+    "baseUrl": "https://example.com",
+    "changeFreq": "weekly",
+    "priority": 0.5,
+    "includeLastMod": true
+}
 
 # Using context manager ensures proper cleanup
 with SitemapgeneratorAPIClient("[YOUR_API_KEY]") as api:
@@ -212,7 +242,13 @@ from apiverve_sitemapgenerator.apiClient import SitemapgeneratorAPIClient
 # Enable debug mode
 api = SitemapgeneratorAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "urls": [ "/", "/about", "/contact", { "url": "/blog", "priority": 0.8, "changeFreq": "daily" }, { "url": "/products", "priority": 0.9 } ], "baseUrl": "https://example.com", "changeFreq": "weekly", "priority": 0.5, "includeLastMod": true }
+query = {
+    "urls": ["/","/about","/contact",{"url":"/blog","priority":0.8,"changeFreq":"daily"},{"url":"/products","priority":0.9}],
+    "baseUrl": "https://example.com",
+    "changeFreq": "weekly",
+    "priority": 0.5,
+    "includeLastMod": true
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -227,8 +263,15 @@ from apiverve_sitemapgenerator.apiClient import SitemapgeneratorAPIClient
 
 api = SitemapgeneratorAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "urls": ["/","/about","/contact",{"url":"/blog","priority":0.8,"changeFreq":"daily"},{"url":"/products","priority":0.9}],
+    "baseUrl": "https://example.com",
+    "changeFreq": "weekly",
+    "priority": 0.5,
+    "includeLastMod": true
+}
+
 try:
-    query = { "urls": [ "/", "/about", "/contact", { "url": "/blog", "priority": 0.8, "changeFreq": "daily" }, { "url": "/products", "priority": 0.9 } ], "baseUrl": "https://example.com", "changeFreq": "weekly", "priority": 0.5, "includeLastMod": true }
     result = api.execute(query)
     print(result)
 finally:
