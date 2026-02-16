@@ -23,7 +23,13 @@ class ValidationError(SitemapgeneratorAPIClientError):
 
 class SitemapgeneratorAPIClient:
     # Validation rules for parameters (generated from schema)
-    VALIDATION_RULES = {"urls": {"type": "array", "required": True, "format": "url"}, "baseUrl": {"type": "string", "required": False, "format": "url"}, "changeFreq": {"type": "string", "required": False, "default": "weekly"}, "priority": {"type": "number", "required": False, "min": 0, "max": 1, "default": 0.5}, "includeLastMod": {"type": "boolean", "required": False, "default": True}}
+    VALIDATION_RULES = {
+        "urls": {"type": "array", "required": True, "format": "url"},
+        "baseUrl": {"type": "string", "required": False, "format": "url"},
+        "changeFreq": {"type": "string", "required": False, "default": "weekly"},
+        "priority": {"type": "number", "required": False, "min": 0, "max": 1, "default": 0.5},
+        "includeLastMod": {"type": "boolean", "required": False, "default": True}
+    }
 
     # Format validation patterns
     FORMAT_PATTERNS = {
@@ -71,18 +77,10 @@ class SitemapgeneratorAPIClient:
                 "API key is required. Get your API key at: https://apiverve.com"
             )
 
-        # Check format (alphanumeric, hyphens, and underscores for prefixed keys)
+        # Check format (GUID, prefixed keys like apv_xxx, or alphanumeric)
         if not re.match(r'^[a-zA-Z0-9_-]+$', api_key):
             raise SitemapgeneratorAPIClientError(
                 "Invalid API key format. API key should only contain letters, numbers, hyphens, and underscores. "
-                "Get your API key at: https://apiverve.com"
-            )
-
-        # Check length (at least 32 characters without hyphens/underscores)
-        trimmed_key = api_key.replace('-', '').replace('_', '')
-        if len(trimmed_key) < 32:
-            raise SitemapgeneratorAPIClientError(
-                "Invalid API key. API key appears to be too short. "
                 "Get your API key at: https://apiverve.com"
             )
 
