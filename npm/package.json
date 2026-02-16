@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/sitemapgenerator",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Sitemap Generator creates valid XML sitemaps from URL lists following the sitemaps.org protocol for search engine optimization.",
   "main": "index.js",
   "types": "index.d.ts",
