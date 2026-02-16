@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:sitemapgenerator-api:1.1.13'
+    implementation 'com.github.apiverve:sitemapgenerator-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ SitemapGeneratorAPIClient client = new SitemapGeneratorAPIClient("YOUR_API_KEY")
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("urls", new ArrayList<>());
+    parameters.put("urls", Arrays.asList("/", "/about", "/contact", [object Object], [object Object]));
     parameters.put("baseUrl", "https://example.com");
     parameters.put("changeFreq", "weekly");
     parameters.put("priority", 0.5);
