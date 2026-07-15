@@ -12,8 +12,16 @@ public class BasicExample {
         SitemapGeneratorAPIClient client = new SitemapGeneratorAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Execute the API request (no parameters required)
-            APIResponse response = client.execute(null);
+            // Request body
+            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
+        parameters.put(&quot;urls&quot;, /,/about,/contact,[object Object],[object Object]);
+        parameters.put(&quot;baseUrl&quot;, &quot;https://example.com&quot;);
+        parameters.put(&quot;changeFreq&quot;, &quot;weekly&quot;);
+        parameters.put(&quot;priority&quot;, 0.5);
+        parameters.put(&quot;includeLastMod&quot;, true);
+
+            // Execute the API request
+            APIResponse response = client.execute(parameters);
 
             // Check if the request was successful
             if (response.isSuccess()) {
