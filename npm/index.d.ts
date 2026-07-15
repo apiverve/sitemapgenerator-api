@@ -4,29 +4,41 @@ declare module '@apiverve/sitemapgenerator' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface sitemapgeneratorResponse {
     status: string;
     error: string | null;
     data: SitemapGeneratorData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface SitemapGeneratorData {
-      sitemap:   string;
-      urlCount:  number;
-      sizeBytes: number;
-      sizeKB:    number;
-      format:    string;
-      protocol:  string;
+      sitemap:   null | string;
+      urlCount:  number | null;
+      sizeBytes: number | null;
+      sizeKB:    number | null;
+      format:    null | string;
+      protocol:  null | string;
       settings:  Settings;
   }
   
   interface Settings {
-      defaultChangeFreq: string;
-      defaultPriority:   number;
-      includeLastMod:    boolean;
-      baseURL:           string;
+      defaultChangeFreq: null | string;
+      defaultPriority:   number | null;
+      includeLastMod:    boolean | null;
+      baseURL:           null | string;
   }
 
   export default class sitemapgeneratorWrapper {
