@@ -20,7 +20,7 @@ namespace APIVerve.Examples
         private static readonly string API_URL = "https://api.apiverve.com/v1/sitemapgenerator";
 
         /// <summary>
-        /// Make a GET request to the Sitemap Generator API
+        /// Make a POST request to the Sitemap Generator API
         /// </summary>
         static async Task<JsonDocument> CallSitemapGeneratorAPI()
         {
@@ -29,7 +29,13 @@ namespace APIVerve.Examples
                 using var client = new HttpClient();
                 client.DefaultRequestHeaders.Add("x-api-key", API_KEY);
 
-                var response = await client.GetAsync(API_URL);
+                // Request body
+                var requestBody &#x3D; new { urls &#x3D; /,/about,/contact,[object Object],[object Object], baseUrl &#x3D; &quot;https://example.com&quot;, changeFreq &#x3D; &quot;weekly&quot;, priority &#x3D; 0.5, includeLastMod &#x3D; true };
+
+                var jsonContent = JsonSerializer.Serialize(requestBody);
+                var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+
+                var response = await client.PostAsync(API_URL, content);
 
                 // Check if response is successful
                 response.EnsureSuccessStatusCode();
