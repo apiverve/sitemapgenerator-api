@@ -14,7 +14,7 @@ namespace APIVerve.API.SitemapGenerator
         /// Array of URLs (strings or objects with url, priority, changeFreq, lastMod)
         /// </summary>
         [JsonProperty("urls")]
-        public string Urls { get; set; }
+        public List<string> Urls { get; set; }
 
         /// <summary>
         /// Base URL to prepend to relative paths
@@ -32,12 +32,12 @@ namespace APIVerve.API.SitemapGenerator
         /// Default priority
         /// </summary>
         [JsonProperty("priority")]
-        public string Priority { get; set; }
+        public double? Priority { get; set; }
 
         /// <summary>
         /// Include lastmod dates in sitemap
         /// </summary>
         [JsonProperty("includeLastMod")]
-        public string IncludeLastMod { get; set; }
+        public bool? IncludeLastMod { get; set; }
     }
 }
