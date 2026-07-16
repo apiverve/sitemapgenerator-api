@@ -25,6 +25,9 @@ namespace APIVerve.API.SitemapGenerator
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,13 +36,13 @@ namespace APIVerve.API.SitemapGenerator
         public string Sitemap { get; set; }
 
         [JsonProperty("urlCount")]
-        public long UrlCount { get; set; }
+        public long? UrlCount { get; set; }
 
         [JsonProperty("sizeBytes")]
-        public long SizeBytes { get; set; }
+        public long? SizeBytes { get; set; }
 
         [JsonProperty("sizeKb")]
-        public double SizeKb { get; set; }
+        public double? SizeKb { get; set; }
 
         [JsonProperty("format")]
         public string Format { get; set; }
@@ -57,12 +60,24 @@ namespace APIVerve.API.SitemapGenerator
         public string DefaultChangeFreq { get; set; }
 
         [JsonProperty("defaultPriority")]
-        public double DefaultPriority { get; set; }
+        public double? DefaultPriority { get; set; }
 
         [JsonProperty("includeLastMod")]
-        public bool IncludeLastMod { get; set; }
+        public bool? IncludeLastMod { get; set; }
 
         [JsonProperty("baseUrl")]
         public Uri BaseUrl { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
