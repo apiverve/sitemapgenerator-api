@@ -14,7 +14,7 @@ namespace APIVerve.API.SitemapGenerator
         /// Array of URLs (strings or objects with url, priority, changeFreq, lastMod)
         /// </summary>
         [JsonProperty("urls")]
-        public List<string> Urls { get; set; }
+        public object Urls { get; set; }
 
         /// <summary>
         /// Base URL to prepend to relative paths
