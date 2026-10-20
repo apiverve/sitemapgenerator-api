@@ -2,8 +2,9 @@ openapi: 3.0.4
 info:
   title: Sitemap Generator
   description: >-
-    Sitemap Generator creates valid XML sitemaps from URL lists following the
-    sitemaps.org protocol for search engine optimization.
+    Sitemap Generator is a website sitemap generator API that creates valid XML
+    sitemaps from URL lists following the sitemaps.org protocol for search
+    engine optimization.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +19,7 @@ servers:
 paths:
   /v1/sitemapgenerator:
     post:
-      summary: Generate Sitemap
+      summary: Sitemap Generator
       description: Generate an XML sitemap from URLs
       operationId: sitemapgenerator
       parameters: []
