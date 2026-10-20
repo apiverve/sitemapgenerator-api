@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/sitemapgenerator",
-  "version": "1.2.0",
-  "description": "Sitemap Generator creates valid XML sitemaps from URL lists following the sitemaps.org protocol for search engine optimization.",
+  "version": "1.2.2",
+  "description": "Sitemap Generator is a website sitemap generator API that creates valid XML sitemaps from URL lists following the sitemaps.org protocol for search engine optimization.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "sitemap generator", "xml sitemap", "seo sitemap", "website sitemap", "url sitemap"
+    "website sitemap generator api", "sitemap generator api", "xml sitemap generator api", "sitemap generator", "xml sitemap"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/sitemapgenerator-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/sitemapgenerator?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/sitemapgenerator?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
