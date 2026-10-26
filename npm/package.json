@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/sitemapgenerator",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Sitemap Generator is a website sitemap generator API that creates valid XML sitemaps from URL lists following the sitemaps.org protocol for search engine optimization.",
   "main": "index.js",
   "types": "index.d.ts",
