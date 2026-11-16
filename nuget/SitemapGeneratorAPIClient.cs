@@ -67,7 +67,7 @@ namespace APIVerve.API.SitemapGenerator
         /// <summary>Validation rules for parameters</summary>
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
-            { "urls", new ValidationRule { Type = "array", Required = true, Format = "url" } },
+            { "urls", new ValidationRule { Type = "array", Required = true } },
             { "baseUrl", new ValidationRule { Type = "string", Required = false, Format = "url" } },
             { "changeFreq", new ValidationRule { Type = "string", Required = false } },
             { "priority", new ValidationRule { Type = "number", Required = false, Min = 0, Max = 1 } },
