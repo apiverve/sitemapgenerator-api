@@ -34,7 +34,7 @@ class Client
      * Validation rules for parameters
      */
     private const VALIDATION_RULES = [
-        'urls' => ['type' => 'array', 'required' => true, 'format' => 'url'],
+        'urls' => ['type' => 'array', 'required' => true],
         'baseUrl' => ['type' => 'string', 'required' => false, 'format' => 'url'],
         'changeFreq' => ['type' => 'string', 'required' => false],
         'priority' => ['type' => 'number', 'required' => false, 'min' => 0, 'max' => 1],
