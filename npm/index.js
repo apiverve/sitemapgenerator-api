@@ -30,7 +30,7 @@ class sitemapgeneratorWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/sitemapgenerator';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"urls":{"type":"array","required":true,"format":"url"},"baseUrl":{"type":"string","required":false,"format":"url"},"changeFreq":{"type":"string","required":false,"default":"weekly"},"priority":{"type":"number","required":false,"min":0,"max":1,"default":0.5},"includeLastMod":{"type":"boolean","required":false,"default":true}};
+        this.validationRules = {"urls":{"type":"array","required":true},"baseUrl":{"type":"string","required":false,"format":"url"},"changeFreq":{"type":"string","required":false,"default":"weekly"},"priority":{"type":"number","required":false,"min":0,"max":1,"default":0.5},"includeLastMod":{"type":"boolean","required":false,"default":true}};
     }
 
     /**
