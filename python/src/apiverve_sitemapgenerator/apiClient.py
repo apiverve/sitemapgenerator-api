@@ -24,7 +24,7 @@ class ValidationError(SitemapgeneratorAPIClientError):
 class SitemapgeneratorAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
-        "urls": {"type": "array", "required": True, "format": "url"},
+        "urls": {"type": "array", "required": True},
         "baseUrl": {"type": "string", "required": False, "format": "url"},
         "changeFreq": {"type": "string", "required": False, "default": "weekly"},
         "priority": {"type": "number", "required": False, "min": 0, "max": 1, "default": 0.5},
